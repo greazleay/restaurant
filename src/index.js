@@ -1,5 +1,5 @@
 import './style.css';
-import { switchToHome, switchtoMenu, switchToContact } from './script';
+import { switchToHome, switchToMenu, switchToContact } from './script';
 
 const container = document.createElement('div');
 container.classList.add('container');
@@ -23,7 +23,7 @@ function addli(anchor, click) {
 }
 
 addli('Home', switchToHome);
-addli('Menu', switchtoMenu);
+addli('Menu', switchToMenu);
 addli('Contact', switchToContact);
 
 const main = document.createElement('main');

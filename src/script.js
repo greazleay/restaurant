@@ -16,11 +16,11 @@ export function switchToHome() {
 
     const button = document.createElement('button');
     button.textContent = 'View our menu';
-    button.onclick = switchtoMenu;
+    button.onclick = switchToMenu;
     home.appendChild(button)
 }
 
-export function switchtoMenu() {
+export function switchToMenu() {
     const main = document.querySelector('main');
     main.childNodes.forEach(child => main.removeChild(child));
     
@@ -33,12 +33,12 @@ export function switchtoMenu() {
         let img = document.createElement('img');
         img.src = url;
         let h1 = document.createElement('h1');
-        h1.textContent = name
-        let desc = document.createElement('p');
-        desc.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+        h1.textContent = name;
+        let p = document.createElement('p');
+        p.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
         article.appendChild(img);
         article.appendChild(h1);
-        article.appendChild(desc);
+        article.appendChild(p);
         menu.appendChild(article)
     }
 
