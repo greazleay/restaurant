@@ -11,8 +11,13 @@ export function switchToHome() {
     main.appendChild(home)
 
     const p = document.createElement('p');
-    p.textContent = 'Welcome to Foodie World!!!'
+    p.textContent = 'Welcome to Foodies Park'
     home.appendChild(p);
+
+    const button = document.createElement('button');
+    button.textContent = 'View our menu';
+    button.onclick = switchtoMenu;
+    home.appendChild(button)
 }
 
 export function switchtoMenu() {

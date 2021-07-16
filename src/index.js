@@ -29,6 +29,8 @@ addli('Contact', switchToContact);
 const main = document.createElement('main');
 container.appendChild(main);
 
+switchToHome()
+
 const footer = document.createElement('footer');
 container.appendChild(footer);
 

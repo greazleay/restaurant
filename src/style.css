@@ -46,7 +46,6 @@ body {
     background-color: rgba(95, 86, 108, 0.5);
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
     flex: 1 1 0;
 }
 
@@ -54,7 +53,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
-    place-content: center flex-start;
+    place-content: center center;
     flex: 1 1 0;
 }
 
@@ -67,15 +66,61 @@ body {
     color: white;
 }
 
+.nav-bar ul li a:hover {
+    color: red;
+    transition: all 0.5s ease-in-out;
+    text-decoration-line: underline;
+    font-size: 1.5rem;
+}
+
 main {
     width: 100%;
     /* height: 80%; */
     flex: 15 1 0;
 }
 
+.home {
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center center;
+    padding-top: 4rem;
+}
+
+.home p {
+    font-size: 3rem;
+    border-top: solid 1px red;
+    border-bottom: solid 1px red;
+    padding: 15px 0;
+}
+
+.home p::after {
+    /* content: " 😜"; */
+    content: " 😊";
+}
+
+.home button {
+    align-self: center;
+    width: max-content;
+    height: max-content;
+    background-color: black;
+    color: white;
+    border: ridge 1mm red;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border-radius: 30px 0px 30px 0px / 15px 0px 15px 0px;
+    padding: 10px;
+}
+
+.home button:hover {
+    color: red;
+    transition: padding 1s ease-out;
+    padding: 20px;
+}
+
 .menu {
     display: flex;
     flex-flow: row wrap;
+    transition: all 1s ease-out;
 }
 
 article {

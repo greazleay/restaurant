@@ -7,3 +7,8 @@ Simple Restaurant Page from [the Odin Project](https://www.theodinproject.com/pa
 ### Contributors
 
 * Lekan Adetunmbi
+
+### Info
+
+* License: MIT
+* [See it live here:](https://pollaroid.net/restaurant)
