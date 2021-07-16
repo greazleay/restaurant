@@ -11,7 +11,7 @@ export function switchToHome() {
     main.appendChild(home)
 
     const p = document.createElement('p');
-    p.textContent = 'Welcome to Foodies Park'
+    p.textContent = 'Welcome to Foodielicious'
     home.appendChild(p);
 
     const button = document.createElement('button');
