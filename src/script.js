@@ -1,6 +1,5 @@
-import sandwich from './asset/sandwich.png';
-import hamburger from './asset/hamburger.png';
-import bibimbub from './asset/bibimbub.png';
+import restaurantData from './data.json';
+
 
 function getMain() {
     const main = document.querySelector('main');
@@ -52,32 +51,17 @@ export function switchToHome() {
     home.appendChild(button)
 }
 
-export async function switchToMenu() {
+export function switchToMenu() {
     const main = getMain()
 
     const menu = document.createElement('section');
     menu.classList.add('menu');
     main.appendChild(menu)
 
-    const res = await fetch('https://ig-food-menus.herokuapp.com/burgers')
-    const data = await res.json();
-
-    if (data.length) {
-
-        data.forEach(item => {
-            const { img, name, dsc, price } = item;
-            menuItem(img, name.trim(), dsc.trim(), price, menu);
-        })
-
-    } else {
-
-        const desc = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
-        menuItem(sandwich, 'Sandwich', desc, 50, menu);
-        menuItem(hamburger, 'Hamburger', desc, 36, menu);
-        menuItem(bibimbub, 'Bibimbub', desc, 97, menu)
-
-    }
+    restaurantData.forEach(item => {
+        const { img, name, dsc, price } = item;
+        menuItem(img, name.trim(), dsc.trim(), price, menu);
+    })
 }
 
 export function switchToContact() {
