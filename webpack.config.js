@@ -24,7 +24,6 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
             title: 'Restaurant',
             favicon: `./src/assets/images/favicon.ico`,
             inject: true
