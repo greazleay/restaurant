@@ -58,10 +58,13 @@ export function switchToMenu() {
     menu.classList.add('menu');
     main.appendChild(menu)
 
-    restaurantData.forEach(item => {
-        const { img, name, dsc, price } = item;
-        menuItem(img, name.trim(), dsc.trim(), price, menu);
-    })
+    // Data from https://github.com/igdev116/free-food-menus-api
+    restaurantData
+        .sort(() => Math.random() - 0.5)
+        .forEach(item => {
+            const { img, name, dsc, price } = item;
+            menuItem(img, name.trim(), dsc.trim(), price, menu);
+        })
 }
 
 export function switchToContact() {
