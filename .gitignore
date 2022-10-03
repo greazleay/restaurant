@@ -77,9 +77,10 @@ typings/
 
 # Next.js build output
 .next
-
 # Nuxt.js build / generate output
 .nuxt
+
+# Add and Remove dist folder during deployment to gh-pages
 dist
 
 # Gatsby files
